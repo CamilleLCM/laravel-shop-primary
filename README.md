@@ -88,7 +88,12 @@ TIMEZONE=Asia/Shanghai
 
 * 导入管理后台数据
 > $ php artisan db:seed --class=AdminTablesSeeder
-
+> 
+>PS:如果执行报错`Target class [AdminTablesSeeder] does not exist`就直接运行以下两个命令
+```
+$ php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+$ php artisan admin:install
+```
 * 创建后台用户
 > php artisan admin:create-user
 
